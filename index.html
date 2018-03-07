@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Weather</title>
+  <link rel="shortcut icon" href="assets/img/weather.ico"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link rel="stylesheet" href="cs/main.css">
 </head>
@@ -21,21 +22,47 @@
   </header>
 
   <main id="main" class="center-align">
-
-  <div class="row">
+    <div class="row">
       <form action="" id="form-location">
         <div class="row">
           <div class="input-field col s10 offset-s1 m6 offset-m3">
-
-        <label for="place-location">Ingresa tu ubicación</label>
-        <input type="text" value="" id="place-location" class="validate" placeholder="ej. México">
-        <button type="submit">Consultar</button>
+            <label class="label" for="place-location">Ingresa tu ubicación</label>
+            <input type="text" value="" id="place-location" class="validate" placeholder="ej. México">
+          </div>
         </div>
+        <div class="row">
+          <div class="col s6 offset-s3 m4 offset-m4">
+            <button class="btn-Weather" type="submit">Consultar</button>
+          </div>
         </div>
-    </form>
-  </div>
+      </form>
+    </div>
+  </main>
+
+  <section id="container-today-weather">
+    <div  class="container" id="weather-info"></div>
+    <div class="row">
+      <div class="col s6 offset-s3 m4 offset-m4">
+        <button id="btn-daily-weather" class="btn-Weather" type="button" name="button">Daily weather</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="container-daily-weather">
+    <div id="weather-day" class="container">
+      
+    </div>
+  </section>
 
 
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
+
+
+<!--
     <div class="row">
       <form class="col s12">
         <div class="row">
@@ -61,27 +88,6 @@
     <h6>19.4095846</h6>
     <h6>-99.1575732</h6>
     <h6><a href="https://darksky.net/poweredby/">“Powered by Dark Sky”</a></h6>
-  </main>
 
 
-  <section id="container-today-weather">
-    <div id="weather-info" class="container"></div>
-    <div class="row">
-      <div class="col s6 offset-s3 m4 offset-m4">
-        <button id="btn-daily-weather" class="btn-Weather" type="button" name="button">Daily weather</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="container-daily-weather">
-    <div id="weather-day" class="container"></div>
-  </section>
-
-
-
-
-  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-  <script type="text/javascript" src="js/app.js"></script>
-</body>
-</html>
+  -->
