@@ -1,0 +1,40 @@
+body {
+  background: url("../assets/img/landscape.jpg") no-repeat;
+  background-size: cover; }
+
+header {
+  box-sizing: border-box;
+  height: 40vh; }
+
+main {
+  box-sizing: border-box;
+  height: 60vh; }
+
+::-webkit-input-placeholder {
+  color: #C8C8C8; }
+
+.label {
+  color: #142238 !important;
+  font-size: 1.3em !important; }
+
+#weather-logo {
+  height: 28vh; }
+
+.btn-Weather {
+  background-color: #7DCFCB;
+  border: none;
+  border-radius: 0.7em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: block;
+  width: 100%; }
+
+#container-today-weather {
+  height: 60vh; }
+
+.weather-features {
+  color: white;
+  display: inline-block;
+  font-size: 1.5em !important;
+  margin-right: 1em; }
+
+/*# sourceMappingURL=main.css.map */
