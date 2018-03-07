@@ -48,4 +48,14 @@ main {
 h4, p, h5, h6 {
   color: white;}
 
+.day-weather {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.day-weather-date {
+  text-transform: uppercase;
+  display: inline-block;
+}
+
 /*# sourceMappingURL=main.css.map */

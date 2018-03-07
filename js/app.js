@@ -4,14 +4,16 @@ const containerTodayWeather = document.querySelector("#container-today-weather")
 containerTodayWeather.style.display = "none";
 
 
+//función para traer la localización del usuario
 const getLocation = (e) => {
     e.preventDefault();
-    const userLocation = document.querySelector("#place-location").value;
+    const userLocation = document.querySelector("#place-location").value; //valor de la localización del usuario
     searchCoordinate(userLocation);
 }
 
 formLocation.addEventListener("submit", getLocation)
 
+//función para llamar  a la api de google maps para obtener las coordenadas
 const searchCoordinate = location => {
 
     const mainContainer = document.querySelector("#main");
@@ -50,6 +52,7 @@ const todayWeather = (lat, lng) => {
         const dailyWeather = data.daily.data; //clima de los días de la semana
         printDataWeather(summary, infoWeather, iconWeather, temperature, wind, humidity, uvIndex, pressure);
         printDailyWeather(dailyWeather);
+
       })
 }
 
@@ -110,6 +113,7 @@ const printDataWeather = (summary, infoWeather, iconWeather, temperature, wind, 
 
 
 const printDailyWeather = dailyW => {
+
   //containerTodayWeather.style.display = "none";
   dailyW.forEach(day => {
         const utcSeconds = day.time;
@@ -117,14 +121,16 @@ const printDailyWeather = dailyW => {
         const temperatureLow = day.temperatureLow;
         const temperatureHigh = day.temperatureHigh;
 
-        const date = new Date(0); // The 0 there is the key, which sets the date to the epoch
-        date.setUTCSeconds(utcSeconds)
+        const date = new Date(utcSeconds * 1000).toLocaleDateString("es-Mx", {weekday :"long", day:"numeric"}); // The 0 there is the key, which sets the date to the epoch
+
 
         const dayWeather = `
         <div class="row">
-          <div class="col s10 m10">
-            <h6>${date}</h6>
-            <h5 class="day-weather"> Min: ${temperatureLow} Max: ${temperatureHigh}</h5>
+          <div class="col s3 offset-s3 m2 offset-m3">
+            <h6 class="day-weather-date">${date} </h6>
+            </div>
+          <div class="col s5 m5">
+            <h5 class="day-weather"> Min: ${temperatureLow}  -  Max: ${temperatureHigh}</h5>
           </div>
         </div>
         `;
@@ -138,4 +144,4 @@ const printDailyWeather = dailyW => {
 //<span>${iconDay}</span>
 
 const btnDailyWeather = document.querySelector("#btn-daily-weather");
-//btnDailyWeather.addEventListener("click", printDailyWeather)
+btnDailyWeather.addEventListener("click", printDailyWeather)
