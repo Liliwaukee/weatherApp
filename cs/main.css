@@ -14,7 +14,7 @@ main {
   color: #C8C8C8; }
 
 .label {
-  color: #142238 !important;
+  color: #264677!important;
   font-size: 1.3em !important; }
 
 #weather-logo {
@@ -29,12 +29,23 @@ main {
   width: 100%; }
 
 #container-today-weather {
-  height: 60vh; }
+  height: 60vh;
+  margin-bottom: 4vh;
+}
 
 .weather-features {
   color: white;
   display: inline-block;
   font-size: 1.5em !important;
   margin-right: 1em; }
+
+.data-weather {
+  color: white;
+  font-weight: 600;
+  font-size: 1em;
+}
+
+h4, p, h5, h6 {
+  color: white;}
 
 /*# sourceMappingURL=main.css.map */
